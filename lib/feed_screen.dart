@@ -6,12 +6,14 @@ class FeedScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          'flynnstagram',
-          // style: TextStyle(
-          //   fontFamily:
-          // ),
+          'Flynnstagram',
+          style: TextStyle(
+            fontFamily: 'VeganStyle',
+            color: Colors.black87,
+          ),
         ),
       ),
+      // body: ListView.builder(itemBuilder: null),
     );
   }
 }
