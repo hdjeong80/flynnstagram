@@ -8,11 +8,12 @@ class FeedScreen extends StatelessWidget {
     return Scaffold(
       appBar: CupertinoNavigationBar(
         leading: IconButton(
-            onPressed: null,
-            icon: Icon(
-              Icons.camera_alt,
-              color: Colors.black87,
-            )),
+          onPressed: () => print('camera'),
+          icon: ImageIcon(
+            AssetImage('assets/images/actionbar_camera.png'),
+            color: Colors.black87,
+          ),
+        ),
         middle: Text(
           'Flynnstagram',
           style: TextStyle(
@@ -24,16 +25,8 @@ class FeedScreen extends StatelessWidget {
           mainAxisSize: MainAxisSize.min,
           children: [
             IconButton(
-              icon: ImageIcon(
-                AssetImage('assets/images/actionbar_camera.png'),
-                color: Colors.black87,
-              ), onPressed: null,
-            ),
-            IconButton(
-              icon: ImageIcon(
-                AssetImage('assets/images/actionbar_camera.png'),
-                color: Colors.black87,
-              ), onPressed: null,
+              icon: Icon(Icons.message),
+              onPressed: () => print('message'),
             ),
           ],
         ),
@@ -46,8 +39,6 @@ class FeedScreen extends StatelessWidget {
   }
 
   Widget feedListBuilder(BuildContext context, int index) {
-        return Post(index);
-      }
+    return Post(index);
+  }
 }
-
-

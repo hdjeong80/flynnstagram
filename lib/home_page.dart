@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flynnstagram/feed_screen.dart';
+import 'package:flynnstagram/screens/feed_screen.dart';
+import 'package:flynnstagram/screens/profile_screen.dart';
 
 class HomePage extends StatefulWidget {
   HomePage({
@@ -15,7 +16,7 @@ class _HomePageState extends State<HomePage> {
     BottomNavigationBarItem(icon: Icon(Icons.home), title: Text('')),
     BottomNavigationBarItem(icon: Icon(Icons.search), title: Text('')),
     BottomNavigationBarItem(icon: Icon(Icons.add), title: Text('')),
-    BottomNavigationBarItem(icon: Icon(Icons.healing), title: Text('')),
+    BottomNavigationBarItem(icon: Icon(Icons.favorite_border), title: Text('')),
     BottomNavigationBarItem(icon: Icon(Icons.account_circle), title: Text('')),
   ];
 
@@ -32,9 +33,7 @@ class _HomePageState extends State<HomePage> {
     Container(
       color: Colors.deepPurpleAccent,
     ),
-    Container(
-      color: Colors.cyanAccent,
-    ),
+    ProfileScreen(),
   ];
 
   @override
